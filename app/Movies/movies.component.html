@@ -1,0 +1,20 @@
+﻿
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <app-sidebarfilter [result]= value (clicked)="onClicked($event)"></app-sidebarfilter>
+        </div>
+        <div class="col-md-9">
+            <h2>Movies list</h2>
+            <hr />
+            <ul>    
+                <li *ngFor="let movie of movieList" (click)="onSelectMovie(movie)" class="col-sm-6 col-md-4">
+                    <span>{{movies.Name}}</span>
+                    <span>{{movies.Description}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
